@@ -13,7 +13,7 @@ public class PlayerChange : MonoBehaviour
     private Vector3 charOutside;
 
     private readonly string charSelected = "charSelected";
-    public int charNum;
+    public int charNum = 1;
     private SpriteRenderer crabRend, octoRend, turtRend;
     private void Awake()
     {
@@ -23,16 +23,12 @@ public class PlayerChange : MonoBehaviour
         crabRend = crab.GetComponent<SpriteRenderer>();
         octoRend = octo.GetComponent<SpriteRenderer>();
         turtRend = turt.GetComponent<SpriteRenderer>();
-        charNum = 3;
 
 
     }
     private void Start()
     {
-        if (charNum == 3)
-        {
-            PlayerPrefs.SetInt(charSelected, 3);
-        }
+
     }
     public void Next()
     {
